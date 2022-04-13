@@ -1,1 +1,1 @@
-# Analiza-sygnalow
+# Analiza sygnałów

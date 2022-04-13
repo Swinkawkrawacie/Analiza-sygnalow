@@ -1,0 +1,46 @@
+\documentclass[12pt]{mwart}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{mathtools,amsthm,amssymb,icomma,upgreek,xfrac,enumitem,multicol,paracol}
+%\usepackage[hidelinks,breaklinks,pdfusetitle,pdfdisplaydoctitle]{hyperref}
+\usepackage{cancel}
+\mathtoolsset{showonlyrefs,mathic}
+\title{\textbf{Raport 1.}}
+\author{\fontsize{12pt}{12pt}\selectfont \emph{Klaudia Janicka, ..., Julia Mazur, 262296}}
+\date{30 kwietnia 2022r}
+\usepackage{float}
+\usepackage{extsizes}
+\usepackage[margin=0.3in]{geometry}
+
+\setlist[enumerate]{}
+\setlist[itemize]{itemsep=0.3em}
+
+\DeclareMathOperator{\diff}{d\!}
+
+\begin{document}
+	\maketitle
+	\section{Cele}
+	\begin{itemize}
+		\item[$\bullet$] Analiza dokładności otrzymanych wartości pojemności kondensatorów podczas mierzenia czasu ładowania i~rozładowania kondensatora.
+		\item[$\bullet$] Analiza wpływu zmiany parametrów $\alpha$ i $\beta$ na~dokładność otrzymanych pojemności kondensatora.
+	\end{itemize}
+	\section{Wstęp teoretyczny}
+	\noindent Aby wyprowadzić równanie różniczkowe i~następnie wyznaczyć czasy ładowania i~rozładowania, korzystamy~z:
+	\begin{itemize}
+		\item[$\bullet$] prawa Ohma
+		\item[$\bullet$] I prawa Kirchhoffa
+		\item[$\bullet$] II prawa Kirchhoffa
+	\end{itemize}
+	Dzięki nim otrzymujemy, że 
+	
+	\begin{equation}\label{row_roz}
+		\frac{\diff U_{c}}{\diff t} +\frac{1}{RC}\, U_{c}=\frac{U}{RC},
+	\end{equation}
+	gdzie $U_{c}$ to~napięcie na~kondensatorze $\left[V\right]$, $R$, to~opór $\left[\Omega\right]$, $C$ to~pojemność kondensatora $\left[F\right]$, a~$t$ to~czas.
+	Czas ładowania możemy wyznaczyć na~podstawie rozwiązania \ref{row_roz}, przyjmując początkowy stan naładowania kondensatora~jako $\alpha U$ a~końcowy~jako $\beta U$, wtedy możemy wyznaczyć pojemność kondensatora~jako $$C=\frac{t_{c}}{R\,ln\left(\frac{1-\alpha}{1-\beta}\right)}.$$\label{poj}
+	\section{Przebieg pomiarów}
+	\section{Wyniki}
+	\section{Wnioski}
+\end{document}
