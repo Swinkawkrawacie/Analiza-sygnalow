@@ -8,8 +8,8 @@
 \usepackage{cancel}
 \mathtoolsset{showonlyrefs,mathic}
 \title{\textbf{Raport 1.}}
-\author{\fontsize{12pt}{12pt}\selectfont \emph{Klaudia Janicka, ..., Julia Mazur, 262296}}
-\date{30 kwietnia 2022r}
+\author{\fontsize{12pt}{12pt}\selectfont \emph{Klaudia Janicka, 262268, Julia Mazur, 262296}}
+\date{30 kwietnia 2022r.}
 \usepackage{float}
 \usepackage{extsizes}
 \usepackage[margin=0.3in]{geometry}
@@ -39,8 +39,85 @@
 		\frac{\diff U_{c}}{\diff t} +\frac{1}{RC}\, U_{c}=\frac{U}{RC},
 	\end{equation}
 	gdzie $U_{c}$ to~napięcie na~kondensatorze $\left[V\right]$, $R$, to~opór $\left[\Omega\right]$, $C$ to~pojemność kondensatora $\left[F\right]$, a~$t$ to~czas.
-	Czas ładowania możemy wyznaczyć na~podstawie rozwiązania \ref{row_roz}, przyjmując początkowy stan naładowania kondensatora~jako $\alpha U$ a~końcowy~jako $\beta U$, wtedy możemy wyznaczyć pojemność kondensatora~jako $$C=\frac{t_{c}}{R\,ln\left(\frac{1-\alpha}{1-\beta}\right)}.$$\label{poj}
+	Czas ładowania możemy wyznaczyć na~podstawie rozwiązania \ref{row_roz}, przyjmując początkowy stan naładowania kondensatora~jako $\alpha U$ a~końcowy~jako $\beta U$, zakładając, że~$0 < \alpha < \beta < 1$. Wtedy możemy wyznaczyć pojemność kondensatora~jako $$C=\frac{t_{c}}{R\,ln\left(\frac{1-\alpha}{1-\beta}\right)}.$$\label{poj_lad}
+	\phantom{a}\\
+	Aby rozładować kondensator nie dostarczamy mu już napięcia, zatem $U = 0$, a wtedy równanie \ref{row_roz} staje się równaniem jednorodnym
+	\begin{equation}\label{row_roz2}
+		\frac{\diff U_{c}}{\diff t} +\frac{1}{RC}\, U_{c}=0.
+	\end{equation}
+	Czas rozładowania wyznaczamy z równania \ref{row_roz2}, przyjmując początkowy stan naładowania kondensatora~jako $\beta U$ a~końcowy~jako $\alpha U$. Wtedy możemy wyznaczyć pojemność kondensatora~jako
+	$$C=\frac{t_d}{R\ln\left({\frac{\beta}{\alpha}}\right)}.$$
+	Z~symetrii czasów rozładowania i ładowania otrzymujemy $\alpha+\beta=1$ i~w~ten sposób dobierane są parametry przy~pomiarach.
 	\section{Przebieg pomiarów}
+	Pomiary wykonane zostały za~pomocą układu RC, którego schemat ukazany jest na~zdjęciu:
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale = 0.35]{schemat.jpg}
+		\caption{Układ RC wykorzystywany do przeprowadzenia pomiarów}
+	\end{figure}
+	Zostało wykonanych 12. pomiarów, cztery dla~każdego z~trzech kondensatorów o~wartościach $10\mu F, 100\mu F$ oraz $470\mu F$. Użyte zostały konretne wartości parametrów $\alpha$ i $\beta$ tak, by $\alpha+\beta=1$:
+	\begin{table}[h] %nie wiem czy to dobrze wygląda, więc feel free to change
+		\centering
+		\begin{tabular}{cc}
+			\hline
+			$\alpha$ & $\beta$ \\ \hline
+			0.1 & 0.9  \\ \hline
+			0.125 & 0.875  \\ \hline
+			0.25 & 0.75 \\ \hline
+			0.45 & 0.55  \\ \hline
+		\end{tabular}
+	\end{table}
 	\section{Wyniki}
+	\subsection{Pojemność kondensatora: $10 \mu F$}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{10_a0.1.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{10_a0.125.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{10_a0.25.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{10_a0.45.png}
+	\end{figure}
+	\subsection{Pojemność kondensatora: $100 \mu F$}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{100_a0.1.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{100_a0.125.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{100_a0.25.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{100_a0.45.png}
+	\end{figure}
+	\subsection{Pojemność kondensatora: $470 \mu F$}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{470_a0.1.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{470_a0.125.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{470_a0.25.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{470_a0.45.png}
+	\end{figure}
 	\section{Wnioski}
 \end{document}
