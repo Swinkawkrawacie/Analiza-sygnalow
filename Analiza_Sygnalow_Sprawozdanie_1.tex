@@ -68,6 +68,109 @@
 		\end{tabular}
 	\end{table}
 	\section{Wyniki}
+	\subsection{470}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{470_tab_a.jpg}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{470_tab_b.jpg}
+	\end{figure}
+	\subsection{100}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{100_tab_a.jpg}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{100_tab_b.jpg}
+	\end{figure}
+	\subsection{10}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{10_tab_a.jpg}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{10_tab_b.jpg}
+	\end{figure}
+	\section{Obliczenia}
+	\subsection{Średnia}
+	\subsubsection{Wzór}
+	\begin{equation}
+		\bar X = \frac{1}{n}\sum\limits_{i=1}^{n} X_{i},
+	\end{equation}
+	gdzie $i=1,2,3,\dots ,n, X_{i},$ to pojedyncza obserwacja, a $n$, to ilość/liczba obserwacji
+	\subsubsection{Przykładowe obliczenia}
+	dla $C=470\mu F, \alpha=0,1, \beta=0,9, n=53$
+	\begin{equation}
+		\bar C = \frac{1}{53}\sum\limits_{i=1}^{53} C_{i}=\frac{476,23\mu F+472,15\mu F+471,43\mu F+\dots +471,06\mu F}{53}\approx471,01\mu F
+	\end{equation}
+	\subsection{Niepewność typu A}
+	\subsubsection{Wzór}
+	\begin{equation}
+		u_{A}\left(X\right)=\sqrt{\frac{\sum\limits_{i=1}^{n}{\left(X_{i}-\bar X\right)}^2}{n\left(n-1\right)}}
+	\end{equation}
+	\subsubsection{Przykładowe obliczenia}
+	dla $C=470\mu F, \alpha=0,1, \beta=0,9, n=53, \bar C=471,01\mu F$
+	\begin{multline}
+		u_{A}\left(C\right)=\sqrt{\frac{\sum\limits_{i=1}^{53}{\left(C_{i}-\bar C\right)}^2}{53\left(53-1\right)}}=\\ \sqrt{\frac{{\left(476,23\mu F-471,01\mu F\right)}^2+{\left(472,15\mu F-471,01\mu F\right)}^2+\dots +{\left(476,23\mu F-471,06\mu F\right)}^2}{53\cdot 52}}\approx0,13\mu F
+	\end{multline}
+	\subsection{Porównanie empirycznych i teoretycznych pojemności kondensatora}:
+	\begin{itemize}
+		\item[$\bullet$] dla $\alpha=0,1$ i $\beta=0,9$:
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{cc}
+				\hline
+				$C$ teoretyczne & $C$ empiryczne \\ \hline
+				$\mu F$ & $\mu F$ \\ \hline
+				$10$ & $10,53211\pm0,00097$  \\ \hline
+				$100$ & $98,216\pm0,012$  \\ \hline
+				$470$ & $471,01\pm0,13$  \\ \hline
+			\end{tabular}
+		\end{table}
+		\item[$\bullet$] dla $\alpha=0,125$ i $\beta=0,875$:
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{cc}
+				\hline
+				$C$ teoretyczne & $C$ empiryczne \\ \hline
+				$\mu F$ & $\mu F$ \\ \hline
+				$10$ & $10,6100\pm0,0012$  \\ \hline
+				$100$ & $109,21\pm0,14$  \\ \hline
+				$470$ & $470,92\pm0,10$  \\ \hline
+			\end{tabular}
+		\end{table}
+		\item[$\bullet$] dla $\alpha=0,25$ i $\beta=0,75$:
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{cc}
+				\hline
+				$C$ teoretyczne & $C$ empiryczne \\ \hline
+				$\mu F$ & $\mu F$ \\ \hline
+				$10$ & $10,4400\pm0,0038$  \\ \hline
+				$100$ & $101,84\pm0,55$  \\ \hline
+				$470$ & $467,471\pm0,084$  \\ \hline
+			\end{tabular}
+		\end{table}
+		\item[$\bullet$] dla $\alpha=0,45$ i $\beta=0,55$:
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{cc}
+				\hline
+				$C$ teoretyczne & $C$ empiryczne \\ \hline
+				$\mu F$ & $\mu F$ \\ \hline
+				$10$ & $10,0700\pm0,0062$  \\ \hline
+				$100$ & $117,34\pm0,16$  \\ \hline
+				$470$ & $451,27\pm0,24$  \\ \hline
+			\end{tabular}
+		\end{table}
+	\end{itemize}
+	\section{Wykresy}
+	\subsection{Naładowanie i rozładowanie kondensatora}:
+	
 	\subsection{Pojemność kondensatora: $10 \mu F$}
 	\begin{figure}[H]
 		\centering
@@ -105,7 +208,7 @@
 	\subsection{Pojemność kondensatora: $470 \mu F$}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{470_a0.1.png}
+		\includegraphics{470_a01.jpg}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
@@ -120,4 +223,8 @@
 		\includegraphics{470_a0.45.png}
 	\end{figure}
 	\section{Wnioski}
+	\begin{itemize}
+		\item[$\bullet$] Możemy zauważyć, że pojemność empiryczna kondensatorów zwiększa się wraz ze wzrostem odległości między $\alpha$ i $\beta$
+		\item %coś że w 10 alfa=0.1 mało pomiarów to niedokładne przybliżenie
+	\end{itemize}
 \end{document}
