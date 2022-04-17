@@ -9,7 +9,10 @@
 \mathtoolsset{showonlyrefs,mathic}
 \title{\textbf{Raport 1.}}
 \author{\fontsize{12pt}{12pt}\selectfont \emph{Klaudia Janicka, 262268, Julia Mazur, 262296}}
-\date{30 kwietnia 2022r.}
+\date{20 kwietnia 2022r.}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{float}
 \usepackage{extsizes}
 \usepackage[margin=0.3in]{geometry}
@@ -68,32 +71,26 @@
 		\end{tabular}
 	\end{table}
 	\section{Wyniki}
-	\subsection{470}
+	\subsection{Pomiary dla kondensatora o $C=10\mu F$.}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{470_tab_a.jpg}
+		\includegraphics[width=1\linewidth]{10_tab.jpg}
+		\caption{Tabela pomiarów pojemności kondensatora $100\mu F$ w zależności od parametrów $\alpha$ i $\beta$.}
 	\end{figure}
+	%\begin{figure}[H]
+		
+	%\end{figure}
+	\subsection{Pomiary dla kondensatora o $C=100\mu F$.}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{470_tab_b.jpg}
+		\includegraphics[width=1\linewidth]{100_tab.jpg}
+		\caption{Tabela pomiarów pojemności kondensatora $100\mu F$ w zależności od parametrów $\alpha$ i $\beta$.}
 	\end{figure}
-	\subsection{100}
+	\subsection{Pomiary dla kondensatora o $C=470\mu F$.}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{100_tab_a.jpg}
-	\end{figure}
-	\begin{figure}[H]
-		\centering
-		\includegraphics{100_tab_b.jpg}
-	\end{figure}
-	\subsection{10}
-	\begin{figure}[H]
-		\centering
-		\includegraphics{10_tab_a.jpg}
-	\end{figure}
-	\begin{figure}[H]
-		\centering
-		\includegraphics{10_tab_b.jpg}
+		\includegraphics[width=1\linewidth]{470_tab.jpg}
+		\caption{Tabela pomiarów pojemności kondensatora $100\mu F$ w zależności od parametrów $\alpha$ i $\beta$.}
 	\end{figure}
 	\section{Obliczenia}
 	\subsection{Średnia}
@@ -151,7 +148,7 @@
 				$C$ teoretyczne & $C$ empiryczne \\ \hline
 				$\mu F$ & $\mu F$ \\ \hline
 				$10$ & $10,4400\pm0,0038$  \\ \hline
-				$100$ & $101,84\pm0,55$  \\ \hline
+				$100$ & $101,84\pm0,17$  \\ \hline
 				$470$ & $467,471\pm0,084$  \\ \hline
 			\end{tabular}
 		\end{table}
@@ -174,6 +171,10 @@
 	\subsection{Pojemność kondensatora: $10 \mu F$}
 	\begin{figure}[H]
 		\centering
+		\includegraphics{10_sr.jpg}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
 		\includegraphics{10_a0.1.png}
 	\end{figure}
 	\begin{figure}[H]
@@ -189,6 +190,10 @@
 		\includegraphics{10_a0.45.png}
 	\end{figure}
 	\subsection{Pojemność kondensatora: $100 \mu F$}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{100_sr.jpg}
+	\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics{100_a0.1.png}
@@ -208,6 +213,10 @@
 	\subsection{Pojemność kondensatora: $470 \mu F$}
 	\begin{figure}[H]
 		\centering
+		\includegraphics{470_sr.jpg}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
 		\includegraphics{470_a01.jpg}
 	\end{figure}
 	\begin{figure}[H]
@@ -224,7 +233,12 @@
 	\end{figure}
 	\section{Wnioski}
 	\begin{itemize}
-		\item[$\bullet$] Możemy zauważyć, że pojemność empiryczna kondensatorów zwiększa się wraz ze wzrostem odległości między $\alpha$ i $\beta$
-		\item %coś że w 10 alfa=0.1 mało pomiarów to niedokładne przybliżenie
+		\item[$\bullet$] Możemy zauważyć, że dla kondensatorów o teoretycznych pojemnościach wynoszących $470\mu F$ i $10\mu F$ pojemność empiryczna zwiększa się wraz ze wzrostem odległości między $\alpha$ i $\beta$;
+		\item[$\bullet$] %coś że w 10 alfa=0.1 mało pomiarów to niedokładne przybliżenie
+		\item[$\bullet$] Niedokładność obliczonej średniej nie jest w pełni wiarygodna, ponieważ pomijamy niedokładność przyrządów przyjmujemy wstępne dane jako dokładne
+		\item[$\bullet$] Pomiary i obliczenia dla kondensatorów o teoretycznych pojemnościach wynoszących $470\mu F$ i $10\mu F$ można uznać za sensowne, ponieważ ich niepewności są niewielkie oraz wartości średnich nieznacznie odbiegają od teoretycznych
+		\item[$\bullet$] Operacje na kondensatorze o pojemności teoretycznej $100\mu F$ były zdecydowanie bardziej rozbieżne, jednak dla $\alpha=0,25$ i $\beta=0,75$ udało się uzyskać satysfakcjonujące wyniki 
+		\item[$\bullet$] Możemy zauważyć, że jeśli wraz ze wzrostem pojemności teoretycznej zmniejszamy $\alpha$ to znajdujemy się najbliżej oczekiwanych wyników.
+		
 	\end{itemize}
 \end{document}
