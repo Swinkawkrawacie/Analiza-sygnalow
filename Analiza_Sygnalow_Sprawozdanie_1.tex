@@ -6,7 +6,7 @@
 \usepackage{mathtools,amsthm,amssymb,icomma,upgreek,xfrac,enumitem,multicol,paracol}
 %\usepackage[hidelinks,breaklinks,pdfusetitle,pdfdisplaydoctitle]{hyperref}
 \usepackage{cancel}
-\mathtoolsset{showonlyrefs,mathic}
+%\mathtoolsset{showonlyrefs,mathic}
 \title{\textbf{Raport 1.}}
 \author{\fontsize{12pt}{12pt}\selectfont \emph{Klaudia Janicka, 262268, Julia Mazur, 262296}}
 \date{20 kwietnia 2022r.}
@@ -42,24 +42,25 @@
 		\frac{\diff U_{c}}{\diff t} +\frac{1}{RC}\, U_{c}=\frac{U}{RC},
 	\end{equation}
 	gdzie $U_{c}$ to~napięcie na~kondensatorze $\left[V\right]$, $R$, to~opór $\left[\Omega\right]$, $C$ to~pojemność kondensatora $\left[F\right]$, a~$t$ to~czas.
-	Czas ładowania możemy wyznaczyć na~podstawie rozwiązania \ref{row_roz}, przyjmując początkowy stan naładowania kondensatora~jako $\alpha U$ a~końcowy~jako $\beta U$, zakładając, że~$0 < \alpha < \beta < 1$. Wtedy możemy wyznaczyć pojemność kondensatora~jako $$C=\frac{t_{c}}{R\,ln\left(\frac{1-\alpha}{1-\beta}\right)}.$$\label{poj_lad}
+	Czas ładowania możemy wyznaczyć na~podstawie rozwiązania \eqref{row_roz}, przyjmując początkowy stan naładowania kondensatora~jako $\alpha U$ a~końcowy~jako $\beta U$, zakładając, że~$0 < \alpha < \beta < 1$. Wtedy możemy wyznaczyć pojemność kondensatora~jako $$C=\frac{t_{c}}{R\,ln\left(\frac{1-\alpha}{1-\beta}\right)}.$$\label{poj_lad}
 	\phantom{a}\\
-	Aby rozładować kondensator nie dostarczamy mu już napięcia, zatem $U = 0$, a wtedy równanie \ref{row_roz} staje się równaniem jednorodnym
+	Aby rozładować kondensator nie dostarczamy mu już napięcia, zatem $U = 0$, a wtedy równanie \eqref{row_roz} staje się równaniem jednorodnym
 	\begin{equation}\label{row_roz2}
 		\frac{\diff U_{c}}{\diff t} +\frac{1}{RC}\, U_{c}=0.
 	\end{equation}
-	Czas rozładowania wyznaczamy z równania \ref{row_roz2}, przyjmując początkowy stan naładowania kondensatora~jako $\beta U$ a~końcowy~jako $\alpha U$. Wtedy możemy wyznaczyć pojemność kondensatora~jako
+	Czas rozładowania wyznaczamy z równania \eqref{row_roz2}, przyjmując początkowy stan naładowania kondensatora~jako $\beta U$ a~końcowy~jako $\alpha U$. Wtedy możemy wyznaczyć pojemność kondensatora~jako
 	$$C=\frac{t_d}{R\ln\left({\frac{\beta}{\alpha}}\right)}.$$
 	Z~symetrii czasów rozładowania i ładowania otrzymujemy $\alpha+\beta=1$ i~w~ten sposób dobierane są parametry przy~pomiarach.
 	\section{Przebieg pomiarów}
-	Pomiary wykonane zostały za~pomocą układu RC, którego schemat ukazany jest na~zdjęciu:
+	\noindent Pomiary wykonane zostały za~pomocą układu RC, którego schemat ukazany jest na~zdjęciu:
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale = 0.35]{schemat.jpg}
 		\caption{Układ RC wykorzystywany do przeprowadzenia pomiarów}
 	\end{figure}
-	Zostało wykonanych 12. pomiarów, cztery dla~każdego z~trzech kondensatorów o~wartościach $10\mu F, 100\mu F$ oraz $470\mu F$. Użyte zostały konretne wartości parametrów $\alpha$ i $\beta$ tak, by $\alpha+\beta=1$:
-	\begin{table}[h] %nie wiem czy to dobrze wygląda, więc feel free to change
+	\noindent Wykorzystane rezystory miały opory: $220\Omega$ i $10k\Omega$.
+	Zostało wykonanych 12. pomiarów, cztery dla~każdego z~trzech kondensatorów o~pojemnościach: $10\mu F, 100\mu F$ oraz $470\mu F$. Użyte zostały konkretne wartości parametrów $\alpha$ i $\beta$ tak, by $\alpha+\beta=1$:
+	\begin{table}[H] %nie wiem czy to dobrze wygląda, więc feel free to change
 		\centering
 		\begin{tabular}{cc}
 			\hline
@@ -70,11 +71,12 @@
 			0.45 & 0.55  \\ \hline
 		\end{tabular}
 	\end{table}
+	\noindent Dla dokładniejszego przedstawienia zależności napięcia od~czasu na~badanych kondensatorach, został wykonany wykres przy użyciu oscyloskopu.
 	\section{Wyniki}
 	\subsection{Pomiary dla kondensatora o $C=10\mu F$.}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\linewidth]{10_tab.jpg}
+		\includegraphics[width=1\linewidth, height=.9\textheight]{10_tab.jpg}
 		\caption{Tabela pomiarów pojemności kondensatora $100\mu F$ w zależności od parametrów $\alpha$ i $\beta$.}
 	\end{figure}
 	%\begin{figure}[H]
@@ -83,7 +85,7 @@
 	\subsection{Pomiary dla kondensatora o $C=100\mu F$.}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\linewidth]{100_tab.jpg}
+		\includegraphics[width=1\linewidth, height=.92\textheight]{100_tab.jpg}
 		\caption{Tabela pomiarów pojemności kondensatora $100\mu F$ w zależności od parametrów $\alpha$ i $\beta$.}
 	\end{figure}
 	\subsection{Pomiary dla kondensatora o $C=470\mu F$.}
@@ -165,7 +167,7 @@
 			\end{tabular}
 		\end{table}
 	\end{itemize}
-	\section{Wykresy}
+	\section{Wykresy}\label{wykresy}
 	\subsection{Naładowanie i rozładowanie kondensatora}:
 	
 	\subsection{Pojemność kondensatora: $10 \mu F$}
@@ -217,7 +219,7 @@
 	\end{figure}
 	\begin{figure}[H]
 		\centering
-		\includegraphics{470_a01.jpg}
+		\includegraphics{470_a0.1.png}
 	\end{figure}
 	\begin{figure}[H]
 		\centering
@@ -233,12 +235,12 @@
 	\end{figure}
 	\section{Wnioski}
 	\begin{itemize}
-		\item[$\bullet$] Możemy zauważyć, że dla kondensatorów o teoretycznych pojemnościach wynoszących $470\mu F$ i $10\mu F$ pojemność empiryczna zwiększa się wraz ze wzrostem odległości między $\alpha$ i $\beta$;
-		\item[$\bullet$] %coś że w 10 alfa=0.1 mało pomiarów to niedokładne przybliżenie
-		\item[$\bullet$] Niedokładność obliczonej średniej nie jest w pełni wiarygodna, ponieważ pomijamy niedokładność przyrządów przyjmujemy wstępne dane jako dokładne
-		\item[$\bullet$] Pomiary i obliczenia dla kondensatorów o teoretycznych pojemnościach wynoszących $470\mu F$ i $10\mu F$ można uznać za sensowne, ponieważ ich niepewności są niewielkie oraz wartości średnich nieznacznie odbiegają od teoretycznych
-		\item[$\bullet$] Operacje na kondensatorze o pojemności teoretycznej $100\mu F$ były zdecydowanie bardziej rozbieżne, jednak dla $\alpha=0,25$ i $\beta=0,75$ udało się uzyskać satysfakcjonujące wyniki 
-		\item[$\bullet$] Możemy zauważyć, że jeśli wraz ze wzrostem pojemności teoretycznej zmniejszamy $\alpha$ to znajdujemy się najbliżej oczekiwanych wyników.
+		\item[$\bullet$] Możemy zauważyć, że~dla~kondensatorów o~teoretycznych pojemnościach wynoszących $470\mu F$~i $10\mu F$ pojemność empiryczna zwiększa~się wraz~ze~wzrostem odległości między~$\alpha$ i $\beta$;
+		\item[$\bullet$] Niedokładność obliczonej średniej nie~jest w~pełni wiarygodna, ponieważ~pomijamy niedokładność przyrządów, a~także przyjmujemy wstępne dane jako~dokładne;
+		\item[$\bullet$] Pomiary i~obliczenia dla~kondensatorów o~teoretycznych pojemnościach wynoszących $470\mu F$ i~$10\mu F$ można uznać za sensowne, ponieważ~ich niepewności są niewielkie oraz~wartości średnich nieznacznie odbiegają od~teoretycznych;
+		\item[$\bullet$] Operacje na~kondensatorze o~pojemności teoretycznej $100\mu F$ były zdecydowanie bardziej rozbieżne, jednak~dla~$\alpha=0,25$ i~$\beta=0,75$ udało się uzyskać satysfakcjonujące wyniki;
+		\item[$\bullet$] Analizując wykresy z punkcie \eqref{wykresy} możemy zauważyć, że~jeśli~wraz~ze~wzrostem pojemności teoretycznej zmniejszamy $\alpha$ to~znajdujemy się najbliżej oczekiwanych wyników;
+		\item[$\bullet$] Dodatkowo widzimy, że~wyniki pomiarów dla~kondensatora o~mniejszej pojemności oscylują wokół jednej wartości, co~wskazuje na~niedokładność urządzenia pomiarowego;
 		
 	\end{itemize}
 \end{document}
