@@ -6,7 +6,7 @@
 \usepackage{mathtools,amsthm,amssymb,icomma,upgreek,xfrac,enumitem,multicol,paracol}
 %\usepackage[hidelinks,breaklinks,pdfusetitle,pdfdisplaydoctitle]{hyperref}
 \usepackage{cancel}
-%\mathtoolsset{showonlyrefs,mathic}
+\mathtoolsset{showonlyrefs,mathic}
 \title{\textbf{Raport 1.}}
 \author{\fontsize{12pt}{12pt}\selectfont \emph{Klaudia Janicka, 262268, Julia Mazur, 262296}}
 \date{20 kwietnia 2022r.}
@@ -26,8 +26,8 @@
 	\maketitle
 	\section{Cele}
 	\begin{itemize}
-		\item[$\bullet$] Analiza dokładności otrzymanych wartości pojemności kondensatorów podczas mierzenia czasu ładowania i~rozładowania kondensatora.
-		\item[$\bullet$] Analiza wpływu zmiany parametrów $\alpha$ i $\beta$ na~dokładność otrzymanych pojemności kondensatora.
+		\item[$\bullet$] Analiza dokładności otrzymanych wartości pojemności kondensatorów podczas mierzenia czasu ładowania i~rozładowania kondensatora;
+		\item[$\bullet$] Analiza wpływu zmiany parametrów $\alpha$ i $\beta$ na~dokładność otrzymanych pojemności kondensatora;
 	\end{itemize}
 	\section{Wstęp teoretyczny}
 	\noindent Aby wyprowadzić równanie różniczkowe i~następnie wyznaczyć czasy ładowania i~rozładowania, korzystamy~z:
@@ -42,7 +42,7 @@
 		\frac{\diff U_{c}}{\diff t} +\frac{1}{RC}\, U_{c}=\frac{U}{RC},
 	\end{equation}
 	gdzie $U_{c}$ to~napięcie na~kondensatorze $\left[V\right]$, $R$, to~opór $\left[\Omega\right]$, $C$ to~pojemność kondensatora $\left[F\right]$, a~$t$ to~czas.
-	Czas ładowania możemy wyznaczyć na~podstawie rozwiązania \eqref{row_roz}, przyjmując początkowy stan naładowania kondensatora~jako $\alpha U$ a~końcowy~jako $\beta U$, zakładając, że~$0 < \alpha < \beta < 1$. Wtedy możemy wyznaczyć pojemność kondensatora~jako $$C=\frac{t_{c}}{R\,ln\left(\frac{1-\alpha}{1-\beta}\right)}.$$\label{poj_lad}
+	Czas ładowania możemy wyznaczyć na~podstawie rozwiązania równania \eqref{row_roz}, przyjmując początkowy stan naładowania kondensatora~jako $\alpha U$ a~końcowy~jako $\beta U$, zakładając, że~$0 < \alpha < \beta < 1$. Wtedy możemy wyznaczyć pojemność kondensatora~jako $$C=\frac{t_{c}}{R\,ln\left(\frac{1-\alpha}{1-\beta}\right)}.$$\label{poj_lad}
 	\phantom{a}\\
 	Aby rozładować kondensator nie dostarczamy mu już napięcia, zatem $U = 0$, a wtedy równanie \eqref{row_roz} staje się równaniem jednorodnym
 	\begin{equation}\label{row_roz2}
@@ -55,7 +55,7 @@
 	\noindent Pomiary wykonane zostały za~pomocą układu RC, którego schemat ukazany jest na~zdjęciu:
 	\begin{figure}[H]
 		\centering
-		\includegraphics[scale = 0.35]{schemat.jpg}
+		\includegraphics[scale = 0.5]{schemat.jpg}
 		\caption{Układ RC wykorzystywany do przeprowadzenia pomiarów}
 	\end{figure}
 	\noindent Wykorzystane rezystory miały opory: $220\Omega$ i $10k\Omega$.
@@ -91,7 +91,7 @@
 	\subsection{Pomiary dla kondensatora o $C=470\mu F$.}
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=1\linewidth]{470_tab.jpg}
+		\includegraphics[width=1\linewidth, height=.93\textheight]{470_tab.jpg}
 		\caption{Tabela pomiarów pojemności kondensatora $100\mu F$ w zależności od parametrów $\alpha$ i $\beta$.}
 	\end{figure}
 	\section{Obliczenia}
@@ -168,8 +168,13 @@
 		\end{table}
 	\end{itemize}
 	\section{Wykresy}\label{wykresy}
-	\subsection{Naładowanie i rozładowanie kondensatora}:
-	
+	\subsection{Naładowanie i rozładowanie kondensatora:}
+	\noindent Wykres został wykonany dla~kondensatora o~pojemności $C=470\mu F$ i~przedstawia zależność napięcia na~nim od~czasu ładowania. Parametry $\alpha$ i~$\beta$ to~odpowiednio $0,1$ i $0,9$.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.2]{oscyloskop.jpg}
+		\caption{Naładowanie i rozładowanie kondensatora na oscyloskopie}
+	\end{figure}
 	\subsection{Pojemność kondensatora: $10 \mu F$}
 	\begin{figure}[H]
 		\centering
