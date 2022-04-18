@@ -26,8 +26,10 @@
 	\maketitle
 	\section{Cele}
 	\begin{itemize}
-		\item[$\bullet$] Analiza dokładności otrzymanych wartości pojemności kondensatorów podczas mierzenia czasu ładowania i~rozładowania kondensatora;
+		\item[$\bullet$] Obserwacja naładowania i rozładowania kondensatorów w czasie
+		\item[$\bullet$] Analiza dokładności otrzymanych wartości pojemności kondensatorów podczas mierzenia czasu ładowania i~rozładowania;
 		\item[$\bullet$] Analiza wpływu zmiany parametrów $\alpha$ i $\beta$ na~dokładność otrzymanych pojemności kondensatora;
+		\item[$\bullet$] %Coś o wpływie oporu
 	\end{itemize}
 	\section{Wstęp teoretyczny}
 	\noindent Aby wyprowadzić równanie różniczkowe i~następnie wyznaczyć czasy ładowania i~rozładowania, korzystamy~z:
@@ -62,7 +64,7 @@
 	Zostało wykonanych 12. pomiarów, cztery dla~każdego z~trzech kondensatorów o~pojemnościach: $10\mu F, 100\mu F$ oraz $470\mu F$. Użyte zostały konkretne wartości parametrów $\alpha$ i $\beta$ tak, by $\alpha+\beta=1$:
 	\begin{table}[H] %nie wiem czy to dobrze wygląda, więc feel free to change
 		\centering
-		\begin{tabular}{cc}
+		\begin{tabular}{c|c}
 			\hline
 			$\alpha$ & $\beta$ \\ \hline
 			0.1 & 0.9  \\ \hline
@@ -71,7 +73,7 @@
 			0.45 & 0.55  \\ \hline
 		\end{tabular}
 	\end{table}
-	\noindent Dla dokładniejszego przedstawienia zależności napięcia od~czasu na~badanych kondensatorach, został wykonany wykres przy użyciu oscyloskopu.
+	\noindent Dla dokładniejszego przedstawienia zależności napięcia od~czasu na~badanych kondensatorach, został wykonany wykres przy użyciu oscyloskopu. %jeszcze bym dodała coś o wpływie oporu na czas ładowania i rozładowania w tej sekcji
 	\section{Wyniki}
 	\subsection{Pomiary dla kondensatora o $C=10\mu F$.}
 	\begin{figure}[H]
@@ -79,9 +81,7 @@
 		\includegraphics[width=1\linewidth, height=.9\textheight]{10_tab.jpg}
 		\caption{Tabela pomiarów pojemności kondensatora $100\mu F$ w zależności od parametrów $\alpha$ i $\beta$.}
 	\end{figure}
-	%\begin{figure}[H]
-		
-	%\end{figure}
+
 	\subsection{Pomiary dla kondensatora o $C=100\mu F$.}
 	\begin{figure}[H]
 		\centering
@@ -121,7 +121,7 @@
 		\item[$\bullet$] dla $\alpha=0,1$ i $\beta=0,9$:
 		\begin{table}[h]
 			\centering
-			\begin{tabular}{cc}
+			\begin{tabular}{c|c}
 				\hline
 				$C$ teoretyczne & $C$ empiryczne \\ \hline
 				$\mu F$ & $\mu F$ \\ \hline
@@ -133,7 +133,7 @@
 		\item[$\bullet$] dla $\alpha=0,125$ i $\beta=0,875$:
 		\begin{table}[h]
 			\centering
-			\begin{tabular}{cc}
+			\begin{tabular}{c|c}
 				\hline
 				$C$ teoretyczne & $C$ empiryczne \\ \hline
 				$\mu F$ & $\mu F$ \\ \hline
@@ -145,7 +145,7 @@
 		\item[$\bullet$] dla $\alpha=0,25$ i $\beta=0,75$:
 		\begin{table}[H]
 			\centering
-			\begin{tabular}{cc}
+			\begin{tabular}{c|c}
 				\hline
 				$C$ teoretyczne & $C$ empiryczne \\ \hline
 				$\mu F$ & $\mu F$ \\ \hline
@@ -157,7 +157,7 @@
 		\item[$\bullet$] dla $\alpha=0,45$ i $\beta=0,55$:
 		\begin{table}[h]
 			\centering
-			\begin{tabular}{cc}
+			\begin{tabular}{c|c}
 				\hline
 				$C$ teoretyczne & $C$ empiryczne \\ \hline
 				$\mu F$ & $\mu F$ \\ \hline
@@ -180,14 +180,14 @@
 		\centering
 		\includegraphics{10_sr.jpg}
 	\end{figure}
-	\begin{figure}[H]
-		\centering
-		\includegraphics{10_a0.1.png}
-	\end{figure}
-	\begin{figure}[H]
-		\centering
-		\includegraphics{10_a0.125.png}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics{10_a0.1.png}
+	%\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics{10_a0.125.png}
+	%\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics{10_a0.25.png}
@@ -201,10 +201,10 @@
 		\centering
 		\includegraphics{100_sr.jpg}
 	\end{figure}
-	\begin{figure}[H]
-		\centering
-		\includegraphics{100_a0.1.png}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics{100_a0.1.png}
+	%\end{figure}
 	\begin{figure}[H]
 		\centering
 		\includegraphics{100_a0.125.png}
@@ -213,10 +213,10 @@
 		\centering
 		\includegraphics{100_a0.25.png}
 	\end{figure}
-	\begin{figure}[H]
-		\centering
-		\includegraphics{100_a0.45.png}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics{100_a0.45.png}
+	%\end{figure}
 	\subsection{Pojemność kondensatora: $470 \mu F$}
 	\begin{figure}[H]
 		\centering
@@ -230,14 +230,14 @@
 		\centering
 		\includegraphics{470_a0.125.png}
 	\end{figure}
-	\begin{figure}[H]
-		\centering
-		\includegraphics{470_a0.25.png}
-	\end{figure}
-	\begin{figure}[H]
-		\centering
-		\includegraphics{470_a0.45.png}
-	\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics{470_a0.25.png}
+	%\end{figure}
+	%\begin{figure}[H]
+	%	\centering
+	%	\includegraphics{470_a0.45.png}
+	%\end{figure}
 	\section{Wnioski}
 	\begin{itemize}
 		\item[$\bullet$] Możemy zauważyć, że~dla~kondensatorów o~teoretycznych pojemnościach wynoszących $470\mu F$~i $10\mu F$ pojemność empiryczna zwiększa~się wraz~ze~wzrostem odległości między~$\alpha$ i $\beta$;
