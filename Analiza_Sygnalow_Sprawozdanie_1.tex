@@ -26,10 +26,10 @@
 	\maketitle
 	\section{Cele}
 	\begin{itemize}
-		\item[$\bullet$] Obserwacja naładowania i rozładowania kondensatorów w czasie
+		\item[$\bullet$] Obserwacja naładowania i rozładowania kondensatorów w czasie;
 		\item[$\bullet$] Analiza dokładności otrzymanych wartości pojemności kondensatorów podczas mierzenia czasu ładowania i~rozładowania;
 		\item[$\bullet$] Analiza wpływu zmiany parametrów $\alpha$ i $\beta$ na~dokładność otrzymanych pojemności kondensatora;
-		\item[$\bullet$] %Coś o wpływie oporu
+		\item[$\bullet$] Badanie wpływu wartości rezystorów na~czas~ładowania/rozładowania.
 	\end{itemize}
 	\section{Wstęp teoretyczny}
 	\noindent Aby wyprowadzić równanie różniczkowe i~następnie wyznaczyć czasy ładowania i~rozładowania, korzystamy~z:
@@ -100,9 +100,9 @@
 	\begin{equation}
 		\bar X = \frac{1}{n}\sum\limits_{i=1}^{n} X_{i},
 	\end{equation}
-	gdzie $i=1,2,3,\dots ,n, X_{i},$ to pojedyncza obserwacja, a $n$, to ilość/liczba obserwacji
+	gdzie $i=1,2,3,\dots ,n; \ X_{i},$ to pojedyncza obserwacja, a $n$ to ilość/liczba obserwacji
 	\subsubsection{Przykładowe obliczenia}
-	dla $C=470\mu F, \alpha=0,1, \beta=0,9, n=53$
+	dla $C=470\mu F, \ \alpha=0,1, \ \beta=0,9, \ n=53$
 	\begin{equation}
 		\bar C = \frac{1}{53}\sum\limits_{i=1}^{53} C_{i}=\frac{476,23\mu F+472,15\mu F+471,43\mu F+\dots +471,06\mu F}{53}\approx471,01\mu F
 	\end{equation}
@@ -112,7 +112,7 @@
 		u_{A}\left(X\right)=\sqrt{\frac{\sum\limits_{i=1}^{n}{\left(X_{i}-\bar X\right)}^2}{n\left(n-1\right)}}
 	\end{equation}
 	\subsubsection{Przykładowe obliczenia}
-	dla $C=470\mu F, \alpha=0,1, \beta=0,9, n=53, \bar C=471,01\mu F$
+	dla $C=470\mu F, \ \alpha=0,1, \ \beta=0,9, \ n=53, \ \bar C=471,01\mu F$
 	\begin{multline}
 		u_{A}\left(C\right)=\sqrt{\frac{\sum\limits_{i=1}^{53}{\left(C_{i}-\bar C\right)}^2}{53\left(53-1\right)}}=\\ \sqrt{\frac{{\left(476,23\mu F-471,01\mu F\right)}^2+{\left(472,15\mu F-471,01\mu F\right)}^2+\dots +{\left(476,23\mu F-471,06\mu F\right)}^2}{53\cdot 52}}\approx0,13\mu F
 	\end{multline}
@@ -169,7 +169,7 @@
 	\end{itemize}
 	\section{Wykresy}\label{wykresy}
 	\subsection{Naładowanie i rozładowanie kondensatora:}
-	\noindent Wykres został wykonany dla~kondensatora o~pojemności $C=470\mu F$ i~przedstawia zależność napięcia na~nim od~czasu ładowania. Parametry $\alpha$ i~$\beta$ to~odpowiednio $0,1$ i $0,9$.
+	\noindent Wykres został wykonany dla~kondensatora o~pojemności $C=470\mu F$ i~przedstawia zależność napięcia na~nim od~czasu ładowania. Parametry $\alpha$ i~$\beta$ to~odpowiednio $0,1$ i $0,9$. Funkcja wzrasta wykładniczo i~opada liniowo.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.2]{oscyloskop.jpg}
@@ -246,6 +246,7 @@
 		\item[$\bullet$] Operacje na~kondensatorze o~pojemności teoretycznej $100\mu F$ były zdecydowanie bardziej rozbieżne, jednak~dla~$\alpha=0,25$ i~$\beta=0,75$ udało się uzyskać satysfakcjonujące wyniki;
 		\item[$\bullet$] Analizując wykresy z punkcie \eqref{wykresy} możemy zauważyć, że~jeśli~wraz~ze~wzrostem pojemności teoretycznej zmniejszamy $\alpha$ to~znajdujemy się najbliżej oczekiwanych wyników;
 		\item[$\bullet$] Dodatkowo widzimy, że~wyniki pomiarów dla~kondensatora o~mniejszej pojemności oscylują wokół jednej wartości, co~wskazuje na~niedokładność urządzenia pomiarowego;
-		
+		\item[$\bullet$] Gdy~kondensatory~i~rezystory są~połączone razem, rezystor opiera~się przepływowi prądu, który może ładować~lub~rozładowywać kondensator. Im~większy rezystor, tym~wolniejsze tempo ładowania/rozładowania;
+		\item[$\bullet$] Czas ładowania i~rozładowania zależy też od~wartości pojemnośći kondensatora. Im~większy kondensator, tym~wolniejsze tempo ładowania/rozładowania.
 	\end{itemize}
 \end{document}
